@@ -62,6 +62,14 @@ def register_user():
 
     return jsonify({"message": "User registered successfully!"}), 201
 
+
+# Logout route to "logout" the user
+@app.route('/api/logout', methods=['POST'])
+@jwt_required()
+def logout():
+    # Logic for logout, for example, blacklisting tokens (optional)
+    return jsonify({"message": "User logged out successfully!"}), 200
+
 # User Login (POST)
 @app.route('/api/login', methods=['POST'])
 def login_user():

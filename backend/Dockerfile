@@ -21,4 +21,5 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Define the command to run your app
-CMD ["python", "app.py"]
+WORKDIR /app/backendapp/
+CMD ["python", " -m ./backendapp.py"]
